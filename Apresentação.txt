@@ -1,0 +1,13 @@
+Nome: Yohan Siedschlag
+
+Idade: 17 anos
+
+Conhecimento Técnico: HTML, CSS, JS, Python e PHP
+
+Mora em: Pai e Mãe
+
+Gosta de: Tecnologia (programação, dispositivos...), Música (canto, violão, escutar...), Jogos e Jesus
+
+Trabalho: Atualmente dou aula de violão para alunos iniciantes, mas como carreira que tenho 
+focado para entrar é na Programação, visando seguir na área, no momento em busca de aprender 
+a parte de Back-End.
