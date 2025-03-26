@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 01 - Completo</title>
+
+    <style type="text/css">
+
+        label{
+            display: inline-block;
+            width: 150px;
+        }
+        input[type="text"]{
+            background-color: rgb(223, 223, 31);
+            font-weight: bold;
+            border-radius: 25px;
+            padding: 0px 20px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            
+            <legend>Dados Pessoais:</legend>
+
+            <label for="idnome">Nome:</label>
+            <input type="text" name="nome" id="idnome" maxlength="40" size="40" placeholder="Nome">
+            
+            <br>
+            <br>
+
+            <label for="idsenha">Senha:</label>
+            <input type="password" name="senha" id="idsenha" maxlength="4" size="4" placeholder="Senha">
+
+            <br>
+            <br>
+
+            <label>Escolha os itens aplicáveis</label>
+            <input type="checkbox" name="video" id="video" required>Placa de Vídeo
+            <input type="checkbox" name="memoria" id="memoria" required>Memória
+            <input type="checkbox" name="caixadesom" id="caixadesom" required>Caixa de Som
+
+            <br>
+            <br>
+
+            <label>Genêro</label>
+            <label><input type="radio" name="genero" value="M" required>Masculino</label>
+            <label><input type="radio" name="genero" value="F" required>Feminino</label>
+            <label><input type="radio" name="genero" value="O" required>Outro</label>
+
+            <br>
+            <br>
+
+            <label>Estado Civil</label>
+            <label><input type="radio" name="civil" value="S" required>Solteiro</label>
+            <label><input type="radio" name="civil" value="C" required>Casado</label>
+            <label><input type="radio" name="civil" value="display" required>Divorciado</label>
+
+            <br>
+            <br>
+
+            <label for="idestado">Estado - UF</label>
+            <select name="estado" id="idestado">
+                <option value="PR">Paraná</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="SP">São Paulo</option>
+            </select>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Estado</legend>
+            <select name="frete" id="idfrete">
+                <option value="0">PR - Frete Grátis</option>
+                <option value="20">SP - Frete R$20</option>
+                <option value="15">SC - Frete R$15</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Suco</legend>
+            <select name="" id="">
+                <optgroup label="fruta">
+                    <option>Laranja</option>
+                    <option>Abacaxi</option>
+                    <option>Morango</option>
+                </optgroup>
+                <optgroup label="mistura">
+                    <option>Água</option>
+                    <option>Leite</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        
+        <br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+
+    </form>
+</body>
+</html>
