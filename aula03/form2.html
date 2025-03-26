@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 02 - Formulário</title>
+</head>
+<body>
+    <form action="#">
+        <label for="idcep">CEP:</label>
+        <input type="text" name="cep" id="idcep" placeholder="12345-345" pattern="\d{5}-?\d{3}" required>
+        <br>
+        <label for="idtel">Telefone:</label>
+        <input type="tel" name="tel" id="idtel" placeholder="12-34567-8901" pattern="\d{2}-\d{5}-?\d{4}" required>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
