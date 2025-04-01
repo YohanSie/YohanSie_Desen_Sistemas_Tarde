@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela 01</title>
+    <title>Tabela 02</title>
 
+    <style>
+        th, td{
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>Mesclar Linhas</h1>
     <table border="1" style="border-collapse: collapse;">
         <tr>
-            <th>Mês</th>
-            <th>Despesas</th>
+            <th>Despesa</th>
             <th>Valor</th>
         </tr>
         <tr>
-            <td rowspan="4">Março</td>
+            <th colspan="2">Março</th>
+        </tr>
+        <tr>
             <td>Combustível</td>
             <td>R$ 100</td>
         </tr>
@@ -32,7 +38,7 @@
             <td>R$ 500</td>
         </tr>
         <tr>
-            <td colspan="3" style="text-align: center;">Yohan Siedschlag</td>
+            <td colspan="2" style="text-align: center;">Yohan Siedschlag</td>
         </tr>
     </table>
 </body>
