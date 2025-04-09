@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Como criar um formulário completo em HTML </title>
+  <meta name="description" content="Aprenda a criar um site completo que usa formulários em HTML">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/validacoes.js"></script>
+</head>
+
+<body>
+  <h1> Bem vindo ao site HTML do Yohan</h1>
+  <h2> Preencha o formulário abaixo para participar do curso de HTML & CSS completo, Senai - Téc Desenv Sistemas</h2>
+
+  <br>
+
+  <form action="#" method="post" id="formCompleto" onsubmit="return validarFormulario()">
+
+    <!-- DADOS PESSOAIS-->
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <table cellspacing="10">
+        <tr>
+          <td>
+            <label for="nome">Nome: </label>
+          </td>
+          <td align="left">
+            <input type="text" name="nome" onkeypress="mascara(this, LETRAS)">
+          </td>
+          <td>
+            <label for="sobrenome">Sobrenome: </label>
+          </td>
+          <td align="left">
+            <input type="text" name="sobrenome" onkeypress="mascara(this, LETRAS)">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Nascimento: </label>
+          </td>
+          <td align="left">
+            <input type="date" name="dtnascimento" id="dtnascimento">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="rg">RG: </label>
+          </td>
+          <td align="left">
+            <input type="text" name="rg" size="13" maxlength="13" onkeypress="mascara(this, RG)">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>CPF:</label>
+          </td>
+          <td align="left">
+            <input type="text" name="cpf" size="14" maxlength="14" onkeypress="mascara(this, CPF)">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- ENDEREÇO -->
+    <fieldset>
+      <legend>Dados de Endereço</legend>
+      <table cellspacing="10">
+        <tr>
+          <td>
+            <label for="rua">Rua:</label>
+          </td>
+          <td align="left">
+            <input type="text" name="rua" onkeypress="mascara(this, LETRAS)">
+          </td>
+          <td>
+            <label for="numero">Numero:</label>
+          </td>
+          <td align="left">
+            <input type="text" name="numero" size="4" maxlength="10" onkeypress="mascara(this, NUM)">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="bairro">Bairro: </label>
+          </td>
+          <td align="left">
+            <input type="text" name="bairro" onkeypress="mascara(this,LETRAS)">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="estado">Estado:</label>
+          </td>
+          <td align="left">
+            <select name="estado">
+              <option value="ac">Acre</option>
+              <option value="al">Alagoas</option>
+              <option value="am">Amazonas</option>
+              <option value="ap">Amapá</option>
+              <option value="ba">Bahia</option>
+              <option value="ce">Ceará</option>
+              <option value="df">Distrito Federal</option>
+              <option value="es">Espírito Santo</option>
+              <option value="go">Goiás</option>
+              <option value="ma">Maranhão</option>
+              <option value="mt">Mato Grosso</option>
+              <option value="ms">Mato Grosso do Sul</option>
+              <option value="mg">Minas Gerais</option>
+              <option value="pa">Pará</option>
+              <option value="pb">Paraíba</option>
+              <option value="pr">Paraná</option>
+              <option value="pe">Pernambuco</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="cidade">Cidade: </label>
+          </td>
+          <td align="left">
+            <input type="text" name="cidade" onkeypress="mascara(this, LETRAS)">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="cep">CEP: </label>
+          </td>
+          <td align="left">
+            <input type="text" name="cep" size="9" maxlength="9" onkeypress="mascara(this, CEP)">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- DADOS DE LOGIN -->
+    <fieldset>
+      <legend>Dados de login</legend>
+      <table cellspacing="10">
+        <tr>
+          <td>
+            <label for="email">E-mail: </label>
+          </td>
+          <td align="left">
+            <input type="email" id="email" name="email" oninput="EMAIL(this.value)" placeholder="nome@gmail.com">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="imagem">Imagem de perfil:</label>
+          </td>
+          <td>
+            <input type="file" name="imagem">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="login">Login de usuário: </label>
+          </td>
+          <td align="left">
+            <input type="text" name="login">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="pass">Senha: </label>
+          </td>
+          <td align="left">
+            <input type="password" name="pass">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="passconfirm">Confirme a senha: </label>
+          </td>
+          <td align="left">
+            <input type="password" name="passconfirm">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+    <div class="buttons">
+      <input type="submit">
+      <input type="reset" value="Limpar">
+    </div>
+  </form>
+
+  <footer>
+    <p>Yohan Siedschlag</p>
+  </footer>
+</body>
+
+</html>

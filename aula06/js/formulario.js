@@ -9,7 +9,6 @@
 
     }
 
-
     function executaMascara() {
         objeto.value=funcao(objeto.value);
     }
