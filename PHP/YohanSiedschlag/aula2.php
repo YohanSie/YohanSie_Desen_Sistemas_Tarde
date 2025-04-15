@@ -17,6 +17,26 @@
     ?>
 
     <p align='center'>Hoje é dia <?= $data_hoje; ?></p>
+
+    <?php
+        echo "teste<br>";
+        echo "Olá Mundo<br>";
+        echo "Isso abrange várias linhas. As novas linhas
+        serão saída também.<br>";
+        echo "Isso abrange \nmúltiplas linhas. A nova linha será \nna saída também<br>";
+        echo "Caracteres Escaping são feitos \"Como esse\".<br><br>";
+    ?>
+
+    <?php
+
+        $comida_favorita = "Italiana";
+        print $comida_favorita[2];
+        $comida_favorita = " Cozinha ".$comida_favorita;
+        print $comida_favorita;
+
+    ?>
+
+    <h4>Yohan Siedschlag</h4>
 </body>
 
 </html>
