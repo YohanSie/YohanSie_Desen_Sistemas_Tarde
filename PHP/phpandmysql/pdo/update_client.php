@@ -40,6 +40,7 @@ if ($idCliente && is_numeric($idCliente)) {
     <script>
         function habilitarEdicao(campo) {
             document.getElementById(campo).removeAttribute("readonly");
+
         }
     </script>
 </head>
@@ -49,7 +50,7 @@ if ($idCliente && is_numeric($idCliente)) {
 
     <?php if ($msgErro): ?>
         <p style="color:red"> <?= htmlspecialchars($msgErro) ?> </p>
-        <form action="update_cliente.php" method="get">
+        <form action="update_client.php" method="get">
             <label for="id">ID do Cliente:</label>
             <input type="number" id="id" name="id" required>
 
@@ -68,7 +69,10 @@ if ($idCliente && is_numeric($idCliente)) {
             <label for="telefone">Telefone:</label>
             <input type="text" id="telefone" name="telefone" value="<?= htmlspecialchars($cliente['telefone']) ?>" readonly onclick="habilitarEdicao('telefone')">
 
-            <button type="submit">Atualixar Cliente</button>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value="<?= htmlspecialchars($cliente['email']) ?>" readonly onclick="habilitarEdicao('email')">
+
+            <button type="submit">Atualizar Cliente</button>
         </form>
     <?php endif; ?>
 </body>
