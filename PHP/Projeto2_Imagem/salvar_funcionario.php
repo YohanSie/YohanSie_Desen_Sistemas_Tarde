@@ -94,10 +94,8 @@ try {
             $stmt->bindParam(":tipo_foto", $tipoFoto);
             $stmt->bindParam(":foto", $foto, PDO::PARAM_LOB);
 
-            if ($stmt->execute()) {
+            if (!$stmt->execute()) {
                 echo "Funcionário cadastrado com sucesso";
-            } else {
-                echo "Erro ao cadastrar o funcionário";
             }
         } else {
             echo "Erro ao fazer UPLOAD da FOTO: " . $_FILES['foto']['error'];
@@ -114,14 +112,79 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Imagens</title>
+    <title>Resultado do Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 420px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+            padding: 32px 28px 24px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 28px;
+            font-size: 2em;
+        }
+
+        .mensagem {
+            font-size: 1.15em;
+            color: #1976d2;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .erro {
+            font-size: 1.15em;
+            color: #e53935;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .btn-listar {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 22px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-listar:hover {
+            background: #125ea7;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Lista de Imagens</h1>
-
-    <!-- LINK PARA LISTAR FUNCIONARIOS -->
-    <a href="consultar_funcionario.php">Listar Funcionário</a>
+    <div class="container">
+        <h1>Resultado do Cadastro</h1>
+        <?php
+        // Exibe a mensagem de retorno do PHP
+        if (isset($stmt) && $stmt->rowCount() > 0) {
+            echo '<div class="mensagem">Funcionário cadastrado com sucesso!</div>';
+        } elseif (isset($erro) && $erro) {
+            echo '<div class="erro">' . htmlspecialchars($erro) . '</div>';
+        }
+        ?>
+        <a href="consultar_funcionario.php" class="btn-listar">Listar Funcionário</a>
+    </div>
 </body>
 
 </html>

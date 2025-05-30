@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body> 
+    <?php require_once 'dropdown.php';?>
+
     <div class="container">
         <h1>Cadastro</h1>
         <h2>Funcionários</h2>
@@ -16,7 +18,7 @@
         <!-- Formulário para cadastrar funcionário -->
         <form action="salvar_funcionario.php" method="post" enctype="multipart/form-data">
             <!-- Campo para inserir o nome do funcionario -->
-            <label for="nome">Nome: </label>
+            <label for="nome">Nome: </label>    
             <input type="text" name="nome" id="nome" required>
             <!-- Campo para inserir o telefone do funcionario -->
             <label for="telefone">Telefone: </label>
