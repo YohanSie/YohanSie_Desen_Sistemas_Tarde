@@ -10,8 +10,10 @@
     "authors": [
         {
             "name": "Yohan Sie.",
-            "email": "cautios.yohan@gmail.com"
+            "email": "yohansie.contato@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "fpdf/fpdf": "^1.86"
+    }
 }
