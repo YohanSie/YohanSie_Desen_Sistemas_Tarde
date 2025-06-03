@@ -1,0 +1,17 @@
+{
+    "name": "vendor/basic",
+    "description": "Projeto de aula da U.C de Desenvolvimento de Sistemas",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Basic\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yohan Sie.",
+            "email": "cautios.yohan@gmail.com"
+        }
+    ],
+    "require": {}
+}
