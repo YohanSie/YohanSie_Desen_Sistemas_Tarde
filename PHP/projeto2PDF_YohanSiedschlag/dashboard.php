@@ -28,12 +28,29 @@ $pdo =  conectarBanco();
             padding: 10px;
         }
 
+        .header a {
+            color: white;
+            text-decoration: none;
+        }
+
         .menu {
-            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            background-color: rgb(122, 0, 0);
+            padding: 10px;
+            border-radius: 10px;
         }
 
         table {
-            width: 100%;
+            margin: auto;
+            width: 80%;
             border-collapse: collapse;
         }
 
@@ -45,7 +62,13 @@ $pdo =  conectarBanco();
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color:rgb(150, 150, 150);
+        }
+
+        h2 {
+            width: 80%;
+            margin: 20px auto;
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -54,9 +77,6 @@ $pdo =  conectarBanco();
     <div class="header">
         <h1>Bem-vindo(a)s, <?= htmlspecialchars($_SESSION['nome']) ?></h1>
         <a href="logout.php">Sair</a>
-    </div>
-    <div class="menu">
-        <a href="relatorio.php">Gerar Relatório PDF</a>
     </div>
 
     <h2>Lista de Produtos</h2>
@@ -83,6 +103,10 @@ $pdo =  conectarBanco();
 
         <?php endwhile; ?>
     </table>
+
+    <div class="menu">
+        <a href="relatorio.php">Gerar Relatório PDF</a>
+    </div>
 </body>
 
 </html>
